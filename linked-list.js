@@ -69,6 +69,74 @@ class LinkedList {
 
     return currNode;
   }
+
+  insertAfter(item, target) {
+    if (!this.head) {
+      return null;
+    }
+
+    let currNode = this.head;
+
+    while (currNode !== null && currNode.value !== target) {
+      currNode = currNode.next;
+    }
+
+    if (currNode === null) {
+      console.log("Item not found");
+      return;
+    }
+
+    currNode.next = new _Node(item, currNode.next);
+  }
+
+  insertBefore(item, target) {
+    if (!this.head) {
+      return null;
+    }
+
+    if (this.head.value === target) {
+      this.head = this.head.next;
+      return;
+    }
+
+    let prevNode = this.head;
+    let currNode = this.head;
+
+    while (currNode !== null && currNode.value !== target) {
+      prevNode = currNode;
+      currNode = currNode.next;
+    }
+
+    if (currNode === null) {
+      console.log("Item not found");
+      return;
+    }
+
+    prevNode.next = new _Node(item, currNode);
+  }
+
+  insertAt(item, position) {
+    if (!this.head) {
+      return null;
+    }
+
+    let currNode = this.head;
+    let prevNode = this.head;
+    let count = 1;
+
+    while (currNode !== null && count < position) {
+      count++;
+      prevNode = currNode;
+      currNode = currNode.next;
+    }
+
+    if (currNode === null) {
+      console.log("Item not found");
+      return;
+    }
+
+    prevNode.next = new _Node(item, currNode);
+  }
 }
 
 module.exports = LinkedList;

@@ -23,6 +23,10 @@ Walk through the linked list code in the curriculum and understand it well. Then
 - Using the `insertAt()` method insert `Kat` in the 3rd position of the list.
 - Remove `Tauhida` from the list.
 
+> `/linked-list.js`
+
+> `/singly-linked.js`
+
 ## Supplemental functions for a linked list
 
 Implement the following functions that operate on your linked list class. Note that these should be free functions instead of methods of the linked list class, so implement them outside the linked list class. Test each function using the list created in exercise 1.
