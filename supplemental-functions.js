@@ -37,10 +37,20 @@ const supplementalFunctions = {
 
     return listSize;
   },
+  isEmpty(SLL) {
+    if (!SLL.head) {
+      return true;
+    }
+    return false;
+  },
 };
 
 const main = require("./singly-linked");
 
 let SLL = main();
 supplementalFunctions.display(SLL);
-console.log(supplementalFunctions.size(SLL));
+console.log(`SLL size: ${supplementalFunctions.size(SLL)}`);
+console.log(`Is SLL empty? ${supplementalFunctions.isEmpty(SLL)}`);
+const LinkedList = require("./linked-list");
+let emptySLL = new LinkedList();
+console.log(`Is emptySLL empty? ${supplementalFunctions.isEmpty(emptySLL)}`);
