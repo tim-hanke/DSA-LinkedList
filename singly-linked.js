@@ -12,7 +12,10 @@ function main() {
   SLL.insertAfter("Hotdog", "Helo");
   SLL.insertAt("Kat", 3);
   SLL.remove("Tauhida");
-  console.log(SLL);
+  // console.log(SLL);
+  return SLL;
 }
 
-main();
+// main();
+
+module.exports = main;
